@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/chessboard-0.3.0.css" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p>Set <a href="docs#config:draggable"><code class="js plain">draggable</code></a> to <code class='js keyword'>true</code> to allow drag and drop of pieces. Pieces will return to their original square when dropped off the board (ie: the default for
+        <a href="docs#config:dropOffBoard"><code class="js plain">dropOffBoard</code></a> is <code class="js string">'snapback'</code>).
+    </p>
+
+    <div id="board" style="width: 400px"></div>
+    <script src="js/json3.min.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/chessboard-0.3.0.js"></script>
+    <script>
+        var init = function() {
+            var cfg = {
+                draggable: true,
+                dropOffBoard: 'snapback',
+                position: 'start'
+            };
+            var board = ChessBoard('board', cfg);
+
+        };
+        $(document).ready(init);
+    </script>
+</body>
+
+</html>
